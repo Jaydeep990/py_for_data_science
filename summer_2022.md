@@ -112,3 +112,85 @@ else:
 ```
 ## Q.3
 ### (a) Differentiate rand and randn function in Numpy.
+|                                                 rand function in numpy                                                 |                                                 randn function in numpy                                                |
+|:----------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|
+| random.randn(d0, d1, ..., dn)                                                                                          | random.rand(d0, d1, ..., dn)                                                                                           |
+| Parameters                                                                                                             | Parameters                                                                                                             |
+| d0, d1, …, dn : int, optional                                                                                          | d0, d1, …, dn : int, optional                                                                                          |
+| The dimensions of the returned array, must be non-negative. If no argument is given a single Python float is returned. | The dimensions of the returned array, must be non-negative. If no argument is given a single Python float is returned. |
+| Return a sample (or samples) from the “standard normal” distribution.                                                  | Return a random sample from a uniform distribution over [0, 1).                                                        |
+| np.random.rand(3)                                                                                                      | np.random.randn(3)                                                                                                     |
+| [ 0.04604743 -1.12499395 -0.42282234]                                                                                  | [0.63016653 0.77964169 0.92521163]                                                                                     |
+### (b) Explain DataFrame in Pandas with example.
+- A Data frame is a two-dimensional data structure.
+- i.e., data is aligned in a tabular fashion in rows and columns.
+- Features of DataFrame
+  - Potentially columns are of different types
+  - Size – Mutable
+  - Labeled axes (rows and columns)
+  - Can Perform Arithmetic operations on rows and columns
+ - Structure
+  ![image](https://media.geeksforgeeks.org/wp-content/uploads/finallpandas.png)
+ - Create DataFrame
+  - A pandas DataFrame can be created using various inputs like −
+    - Lists
+    - dict
+    - Series
+    - Numpy ndarrays
+    - Another DataFrame
+ - Creating DataFrame from dict of lists: 
+  ```python
+    import pandas as pd
+
+  # intialise data of lists.
+  data = {'Name':['Tom', 'nick', 'krish', 'jack'],
+          'Age':[20, 21, 19, 18]}
+
+  # Create DataFrame
+  df = pd.DataFrame(data)
+
+  # Print the output.
+  print(df)
+  ```
+  ```python
+      Output:
+        Name  Age
+    0    Tom   20
+    1   nick   21
+    2  krish   19
+    3   jack   18
+  ```
+### (c) Write a program to print following patterns.
+```
+1)
+*
+* *
+* * *
+* * * *
+2)
+$ $ $ $
+$ $ $
+$ $
+$
+3)
+# # # # #
+ # # #
+   #
+ # # #
+# # # # #
+```
+```python
+1.
+for i in range(4):
+    for j in range(4):
+        if i>=j:
+            print('*',end=" ")
+    print()
+2.
+for i in range(4):
+    for j in range(4):
+        if i<=j:
+            print('*',end=" ")
+    print()
+```
+
